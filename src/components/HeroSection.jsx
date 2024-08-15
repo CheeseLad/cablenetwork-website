@@ -29,7 +29,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative pb-10 pt-20 overflow-hidden">
+    <div className="relative pb-10 pt-20 overflow-hidden bg-gradient-to-r from-green-400 to-green-500">
       {/* Background Slideshow */}
       <Slider {...backgroundSliderSettings} className="absolute top-0 left-0 w-full h-full">
         <div className="bg-cover bg-center h-full" style={{ backgroundImage: `url(${background1})` }}></div>
@@ -38,8 +38,8 @@ const HeroSection = () => {
       </Slider>
 
       {/* Centered Content */}
-      <div className="flex justify-center items-center h-full relative z-10">
-        <div className="flex w-full max-w-6xl px-4 py-8 bg-white bg-opacity-80 rounded-lg shadow-lg">
+      <div className="flex justify-center items-center h-full relative z-10 ">
+        <div className="flex w-full max-w-6xl px-4 py-8 bg-white rounded-lg shadow-lg">
           {/* Info on the Left */}
           <div className="w-1/2 pr-8">
             <h1 className="text-4xl font-bold mb-4">Cable Network</h1>
