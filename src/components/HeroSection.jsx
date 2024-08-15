@@ -1,6 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
-import background from '../assets/background.jpg';
+import background1 from '../assets/background1.jpg';
+import background2 from '../assets/background2.jpg';
+import background3 from '../assets/background3.png';
 
 const HeroSection = () => {
   // Settings for the main background slideshow
@@ -27,12 +29,12 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative py-10 overflow-hidden">
+    <div className="relative pb-10 pt-20 overflow-hidden">
       {/* Background Slideshow */}
       <Slider {...backgroundSliderSettings} className="absolute top-0 left-0 w-full h-full">
-        <div className="bg-cover bg-center h-full" style={{ backgroundImage: `url(${background})` }}></div>
-        <div className="bg-cover bg-center h-full" style={{ backgroundImage: `url(${background})` }}></div>
-        <div className="bg-cover bg-center h-full" style={{ backgroundImage: `url(${background})` }}></div>
+        <div className="bg-cover bg-center h-full" style={{ backgroundImage: `url(${background1})` }}></div>
+        <div className="bg-cover bg-center h-full" style={{ backgroundImage: `url(${background2})` }}></div>
+        <div className="bg-cover bg-center h-full" style={{ backgroundImage: `url(${background3})` }}></div>
       </Slider>
 
       {/* Centered Content */}
@@ -51,13 +53,13 @@ const HeroSection = () => {
           <div className="w-1/2">
             <Slider {...screenshotSliderSettings}>
               <div className="p-2">
-                <img src={background} alt="Screenshot 1" className="w-full rounded-lg shadow-md"/>
+                <img src={background1} alt="Screenshot 1" className="w-full rounded-lg shadow-md"/>
               </div>
               <div className="p-2">
-                <img src={background} alt="Screenshot 2" className="w-full rounded-lg shadow-md"/>
+                <img src={background2} alt="Screenshot 2" className="w-full rounded-lg shadow-md"/>
               </div>
               <div className="p-2">
-                <img src={background} alt="Screenshot 3" className="w-full rounded-lg shadow-md"/>
+                <img src={background3} alt="Screenshot 3" className="w-full rounded-lg shadow-md"/>
               </div>
             </Slider>
           </div>

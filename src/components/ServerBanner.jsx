@@ -43,6 +43,14 @@ const ServerBanner = () => {
       >
         Connect in Steam
       </a>
+      <a
+        href="https://steamcommunity.com/sharedfiles/filedetails/?id=2071736126"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="ml-4 bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-600 transition"
+      >
+        View Workshop List
+      </a>
     </div>
   );
 };
