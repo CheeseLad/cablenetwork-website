@@ -91,6 +91,9 @@ const Navbar = () => {
             <a href="#" className="ml-4 px-6 py-2 text-white bg-green-500 rounded-full font-bold hover:bg-green-600 transition duration-300 shadow-md">
               Store
             </a>
+            <a href="/discord" className="ml-4 px-6 py-2 text-white bg-purple-500 rounded-full font-bold hover:bg-purple-600 transition duration-300 shadow-md">
+              Discord
+            </a>
           </div>
           <div className="md:hidden flex items-center">
             <button className="outline-none mobile-menu-button" onClick={() => setIsOpen(!isOpen)}>
@@ -113,6 +116,7 @@ const Navbar = () => {
           <a href="#" className="block py-2 px-4 text-sm hover:bg-green-500 hover:text-white transition duration-300">Server Rules</a>
           <a href="#" className="block py-2 px-4 text-sm hover:bg-green-500 hover:text-white transition duration-300">Contact</a>
           <a href="#" className="block py-2 px-4 text-sm bg-green-500 text-white hover:bg-green-600 transition duration-300">Store</a>
+          <a href="/discord" className="block py-2 px-4 text-sm bg-purple-500 text-white hover:bg-purple-600 transition duration-300">Discord</a>
         </div>
       )}
     </nav>
