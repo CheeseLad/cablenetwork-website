@@ -6,7 +6,7 @@ import axios from 'axios';
 const ServerBanner = () => {
   const [status, setStatus] = useState('checking'); // 'online', 'offline', 'checking'
   const serverIP = '45.43.163.72:27019';
-  const steamLink = `steam://connect/${serverIP}`;
+  const steamLink = `steam://rungameid/304930//+connect%20${serverIP}`;
 
   useEffect(() => {
     const checkServerStatus = async () => {
@@ -31,7 +31,7 @@ const ServerBanner = () => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 max-w-md mx-auto my-8 border border-gray-200">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-2xl font-bold text-gray-800">Unturned Server</h2>
+        <h2 className="text-2xl font-bold text-gray-800">Cable Creative Roleplay</h2>
         <div className={`w-4 h-4 rounded-full ${status === 'online' ? 'bg-green-500' : 'bg-red-500'}`} />
       </div>
       <p className="text-lg text-gray-700 mb-4">IP: {serverIP}</p>

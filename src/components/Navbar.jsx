@@ -9,10 +9,6 @@ const Navbar = () => {
     setActiveDropdown(dropdown);
   };
 
-  const handleDropdownMouseLeave = () => {
-    setActiveDropdown(null);
-  };
-
   return (
     <nav className="bg-white shadow-lg">
       <div className="max-w-6xl mx-auto px-4">
@@ -21,7 +17,7 @@ const Navbar = () => {
             <div>
               <a href="/" className="flex items-center py-4 px-2">
                 <img src={logo} alt="Logo" className="h-10 w-10 mr-2"/>
-                <span className="font-semibold text-gray-500 text-lg">Cable Network</span>
+                <span className="font-semibold text-gray-500 text-lg">Cable Creative Roleplay</span>
               </a>
             </div>
           </div>
@@ -81,7 +77,7 @@ const Navbar = () => {
             <a href="https://discord.gg/cable-network-702877615136178326" className="ml-4 px-4 py-2 text-white bg-purple-500 rounded-full font-bold hover:bg-purple-600 transition duration-300 shadow-md">
               Discord
             </a>
-            <a href="https://store.cablenetwork.xyz" className="ml-4 px-4 py-2 text-white bg-green-500 rounded-full font-bold hover:bg-green-600 transition duration-300 shadow-md">
+            <a href="https://cable-network.tebex.io" className="ml-4 px-4 py-2 text-white bg-green-500 rounded-full font-bold hover:bg-green-600 transition duration-300 shadow-md">
               Store
             </a>
           </div>
@@ -106,7 +102,7 @@ const Navbar = () => {
           <a href="/server-rules" className="block py-2 px-4 text-sm hover:bg-green-500 hover:text-white transition duration-300">Server Rules</a>
           <a href="/contact" className="block py-2 px-4 text-sm hover:bg-green-500 hover:text-white transition duration-300">Contact</a>
           <a href="https://discord.gg/cable-network-702877615136178326" className="block py-2 px-4 text-sm bg-purple-500 text-white hover:bg-purple-600 transition duration-300">Discord</a>
-          <a href="https://store.cablenetwork.xyz" className="block py-2 px-4 text-sm bg-green-500 text-white hover:bg-green-600 transition duration-300">Store</a>
+          <a href="https://cable-network.tebex.io" className="block py-2 px-4 text-sm bg-green-500 text-white hover:bg-green-600 transition duration-300">Store</a>
         </div>
       )}
     </nav>

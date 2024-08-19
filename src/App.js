@@ -8,6 +8,7 @@ import ServerRulesPage from "./components/ServerRulesPage";
 import ServerBanner from "./components/ServerBanner";
 import StaffPage from "./components/StaffPage";
 import DiscordRulesPage from "./components/DiscordRulesPage";
+import SteamWorkshopGrid from "./components/SteamWorkshopGrid";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <HeroSection />
               <ServerBanner />
               <StatsPage />
+              <SteamWorkshopGrid collectionId="3056757456" />
               <Footer />
             </div>
           }

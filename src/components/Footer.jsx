@@ -12,12 +12,12 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="text-center mb-4">
           <p className="text-gray-500">
-            © {currentYear} Cable Network. All rights reserved.
+            © {currentYear} Cable Creative Roleplay. All rights reserved.
           </p>
         </div>
         <div className="flex justify-center space-x-6">
           <a
-            href="https://store.cablenetwork.xyz"
+            href="https://cable-network.tebex.io"
             className="text-2xl text-green-500 hover:text-green-600 transition duration-300"
           >
             <FontAwesomeIcon icon={faCartShopping} />
@@ -29,13 +29,13 @@ const Footer = () => {
             <FontAwesomeIcon icon={faDiscord} />
           </a>
           <a
-            href="#"
+            href="https://steamcommunity.com/sharedfiles/filedetails/?id=2071736126"
             className="text-2xl text-green-500 hover:text-green-600 transition duration-300"
           >
             <FontAwesomeIcon icon={faSteam} />
           </a>
           <a
-            href="#"
+            href="steam://rungameid/304930//+connect%2045.43.163.72:27019"
             className="text-2xl text-green-500 hover:text-green-600 transition duration-300"
           >
             <FontAwesomeIcon icon={faServer} />

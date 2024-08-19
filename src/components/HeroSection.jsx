@@ -42,7 +42,7 @@ const HeroSection = () => {
         <div className="flex w-full max-w-6xl px-4 py-8 bg-white rounded-lg shadow-lg">
           {/* Info on the Left */}
           <div className="w-1/2 pr-8">
-            <h1 className="text-4xl font-bold mb-4">Cable Network</h1>
+            <h1 className="text-4xl font-bold mb-4">Cable Creative Roleplay</h1>
             <h2 className="text-2xl font-semibold mb-4">An Unturned Creative Roleplay Experience Like No Other!</h2>
             <p className="text-lg mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel dui in lorem convallis mattis vel ut diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce laoreet nisi eu maximus molestie. Praesent malesuada felis ac ante finibus, ac pretium nibh finibus. Donec viverra lorem sit amet pretium fringilla.
