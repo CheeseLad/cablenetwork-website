@@ -1,5 +1,3 @@
-// src/StaffPage.js
-
 import React from 'react';
 import cheeselad from '../assets/staff/cheeselad.png';
 import beans from '../assets/staff/beans.png';

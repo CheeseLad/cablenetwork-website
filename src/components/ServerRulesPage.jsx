@@ -1,5 +1,3 @@
-// src/ServerRulesPage.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -9,7 +7,6 @@ const ServerRulesPage = () => {
   useEffect(() => {
     const fetchContent = async () => {
       try {
-        // This URL might need additional handling as it provides embedded content
         const response = await axios.get('https://docs.google.com/document/d/e/2PACX-1vSsAkBViKIyb8YSITLL1tAM5XbfJXKZXhpHAO1rogYKGd4Pn0_4JL6lwu6J6cBEekvyt0ilNDm5edPI/pub?embedded=true');
         setContent(response.data);
       } catch (error) {
@@ -25,8 +22,8 @@ const ServerRulesPage = () => {
       <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
         <h1 className="text-3xl font-bold text-gray-800 mb-4 text-center">Server Rules</h1>
         <div
-          className="prose lg:prose-xl mx-auto" // Center the content and adjust the size
-          style={{ maxWidth: '100%', overflowX: 'auto' }} // Allow horizontal scrolling if needed
+          className="prose lg:prose-xl mx-auto"
+          style={{ maxWidth: '100%', overflowX: 'auto' }}
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </div>

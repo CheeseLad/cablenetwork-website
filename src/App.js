@@ -9,6 +9,8 @@ import ServerBanner from "./components/ServerBanner";
 import StaffPage from "./components/StaffPage";
 import DiscordRulesPage from "./components/DiscordRulesPage";
 import SteamWorkshopGrid from "./components/SteamWorkshopGrid";
+import LeaderboardPage from "./components/LeaderboardPage";
+import ItemTable from "./components/ItemTable";
 
 function App() {
   return (
@@ -22,7 +24,28 @@ function App() {
               <HeroSection />
               <ServerBanner />
               <StatsPage />
-              <SteamWorkshopGrid collectionId="3056757456" />
+              <LeaderboardPage />
+              
+              <Footer />
+            </div>
+          }
+        />
+        <Route
+          path="/economy"
+          element={
+            <div>
+              <Navbar />
+              <ItemTable />
+              <Footer />
+            </div>
+          }
+        />
+        <Route 
+          path="/mods"
+          element={
+            <div>
+              <Navbar />
+              <SteamWorkshopGrid />
               <Footer />
             </div>
           }

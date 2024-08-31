@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Home",
+    "href": "/",
+    "dropdown": false
+  },
+  {
+    "name": "Mods",
+    "href": "/mods",
+    "dropdown": false
+  },
+  {
+    "name": "Economy",
+    "href": "/economy",
+    "dropdown": false
+  },
+  {
+    "name": "Staff",
+    "href": "/staff",
+    "dropdown": false
+  },
+  {
+    "name": "Apply",
+    "dropdown": true,
+    "items": [
+      {
+        "name": "Staff Application",
+        "href": "https://forms.gle/RRRr2fhtbHXucgvu7",
+        "external": true
+      },
+      {
+        "name": "Developer Application",
+        "href": "https://forms.gle/yFDMAHUicjimtJ5z7",
+        "external": true
+      }
+    ]
+  },
+  {
+    "name": "Rules",
+    "dropdown": true,
+    "items": [
+      {
+        "name": "Discord Rules",
+        "href": "/discord-rules"
+      },
+      {
+        "name": "Server Rules",
+        "href": "/server-rules"
+      }
+    ]
+  },
+  {
+    "name": "Discord",
+    "href": "https://discord.gg/cable-network-702877615136178326",
+    "external": true
+  },
+  {
+    "name": "Store",
+    "href": "https://cable-network.tebex.io",
+    "external": true
+  }
+]

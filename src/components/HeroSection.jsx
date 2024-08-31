@@ -5,7 +5,6 @@ import background2 from '../assets/background2.jpg';
 import background3 from '../assets/background3.png';
 
 const HeroSection = () => {
-  // Settings for the main background slideshow
   const backgroundSliderSettings = {
     dots: true,
     infinite: true,
@@ -16,7 +15,6 @@ const HeroSection = () => {
     arrows: false,
   };
 
-  // Settings for the screenshot slideshow
   const screenshotSliderSettings = {
     dots: false,
     infinite: true,
@@ -30,17 +28,14 @@ const HeroSection = () => {
 
   return (
     <div className="relative pb-10 pt-20 overflow-hidden bg-gradient-to-r from-green-400 to-green-500">
-      {/* Background Slideshow */}
       <Slider {...backgroundSliderSettings} className="absolute top-0 left-0 w-full h-full">
         <div className="bg-cover bg-center h-full" style={{ backgroundImage: `url(${background1})` }}></div>
         <div className="bg-cover bg-center h-full" style={{ backgroundImage: `url(${background2})` }}></div>
         <div className="bg-cover bg-center h-full" style={{ backgroundImage: `url(${background3})` }}></div>
       </Slider>
 
-      {/* Centered Content */}
       <div className="flex justify-center items-center h-full relative z-10 ">
         <div className="flex w-full max-w-6xl px-4 py-8 bg-white rounded-lg shadow-lg">
-          {/* Info on the Left */}
           <div className="w-1/2 pr-8">
             <h1 className="text-4xl font-bold mb-4">Cable Creative Roleplay</h1>
             <h2 className="text-2xl font-semibold mb-4">An Unturned Creative Roleplay Experience Like No Other!</h2>
@@ -49,7 +44,6 @@ const HeroSection = () => {
             </p>
           </div>
           
-          {/* Screenshot Slideshow on the Right */}
           <div className="w-1/2">
             <Slider {...screenshotSliderSettings}>
               <div className="p-2">
