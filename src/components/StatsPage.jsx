@@ -42,10 +42,9 @@ const StatsPage = () => {
     fetchDiscordMembers();
   }, []);
 
-  // Convert total playtime in seconds to days with decimal format
   const formatPlayTime = (seconds) => {
-    const days = seconds / 86400; // 86400 seconds in a day
-    return `${days.toFixed(2)} days`; // Display days with two decimal places
+    const days = seconds / 86400;
+    return `${days.toFixed(2)} days`;
   };
 
   const stats = [

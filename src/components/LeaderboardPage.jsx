@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaUser, FaDollarSign } from 'react-icons/fa';
+import { Filter } from 'bad-words';
 
 const LeaderboardPage = () => {
   const [leaderboard, setLeaderboard] = useState([]);
@@ -21,6 +22,12 @@ const LeaderboardPage = () => {
     fetchLeaderboard();
   }, []);
 
+  const filter = new Filter();
+
+  const filterProfanity = (name) => {
+    return filter.clean(name);
+  };
+
   return (
     <div className="bg-white py-10">
       <div className="max-w-6xl mx-auto px-4">
@@ -34,8 +41,12 @@ const LeaderboardPage = () => {
                 <div className="mb-4">
                   <FaUser className="text-4xl text-green-500" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-1">{player.CharacterName}</h2>
-                <h2 className="text-4xl font-bold text-gray-800 mb-2">${player.Balance.toLocaleString()}</h2>
+                <h2 className="text-2xl font-bold text-gray-800 mb-1">
+                  {filterProfanity(player.CharacterName)}
+                </h2>
+                <h2 className="text-4xl font-bold text-gray-800 mb-2">
+                  ${player.Balance.toLocaleString()}
+                </h2>
                 <p className="text-gray-600 text-center">Rank #{index + 1}</p>
               </div>
             ))}

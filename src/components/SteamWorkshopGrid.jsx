@@ -22,9 +22,7 @@ const SteamWorkshopGrid = () => {
   }, []);
 
   const stripTags = (text) => {
-    // Regular expression to match various tags and their attributes
     const tagRegex = /\[\/?[a-zA-Z0-9]+\s*(?:=[^\]]*)?\]/g;
-    // Remove tags and return plain text
     return text.replace(tagRegex, '');
   };
   

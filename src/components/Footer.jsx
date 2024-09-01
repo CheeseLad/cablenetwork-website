@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="text-center mb-4">
           <p className="text-gray-500">
-            © {currentYear} Cable Creative Roleplay. All rights reserved.
+            © 2020 - {currentYear} Cable Creative Roleplay. All rights reserved.
           </p>
         </div>
         <div className="flex justify-center space-x-6">
