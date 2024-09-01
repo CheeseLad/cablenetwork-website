@@ -31,7 +31,7 @@ const ServerBanner = () => {
   const { id, address, port, hostname, players, maxplayers, score, rank, map } = serverData;
 
   const voteUrl = `https://unturned-servers.net/server/${id}/vote/`;
-  const workshopUrl = "https://steamcommunity.com/sharedfiles/filedetails/?id=2071736126";
+  const workshopUrl = "/mods";
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 max-w-xl mx-auto my-8 border border-gray-200">

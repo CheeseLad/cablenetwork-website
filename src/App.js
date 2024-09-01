@@ -73,6 +73,16 @@ function App() {
           }
         />
         <Route
+          path="/workshop"
+          element={
+            <div>
+              <Navbar />
+              <SteamWorkshopGrid />
+              <Footer />
+            </div>
+          }
+        />
+        <Route
           path="/server-rules"
           element={
             <div>

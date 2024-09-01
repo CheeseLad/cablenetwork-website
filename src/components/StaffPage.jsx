@@ -12,28 +12,28 @@ const staffMembers = [
     position: 'Server Owner',
     image: cheeselad,
     steam: 'https://steamcommunity.com/id/tastycheese101',
-    discord: 'https://discordapp.com/users/cheeselad'
+    discord: 'https://discordapp.com/users/325310653130735618'
   },
   {
     name: 'Beans',
     position: 'Server Manager',
     image: beans,
-    steam: 'https://steamcommunity.com/id/bobsmith',
-    discord: 'https://discordapp.com/users/bobsmith'
+    steam: 'https://steamcommunity.com/profiles/76561198906738082',
+    discord: 'https://discordapp.com/users/482619303322189834'
   },
   {
     name: 'RoBoT24',
     position: 'Head-Developer',
     image: robot24,
-    steam: 'https://steamcommunity.com/id/charliebrown',
-    discord: 'https://discordapp.com/users/charliebrown'
+    steam: 'https://steamcommunity.com/id/gkdjfokskfkskds',
+    discord: 'https://discordapp.com/users/1257542885058940950'
   },
   {
     name: 'Prophet',
     position: 'Head-Of-Staff',
     image: prophet,
-    steam: 'https://steamcommunity.com/id/davidlee',
-    discord: 'https://discordapp.com/users/davidlee'
+    steam: 'https://steamcommunity.com/profiles/76561198445222957',
+    discord: 'https://discordapp.com/users/446427231246614528'
   }
 ];
 

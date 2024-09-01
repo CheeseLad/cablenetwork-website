@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { FaUser, FaServer, FaStar, FaDollarSign } from 'react-icons/fa';
+import { FaUser, FaServer, FaStar, FaDiscord } from 'react-icons/fa';
 
 const StatsPage = () => {
   const [activeUsers, setActiveUsers] = useState(0);
   const [totalPlayTime, setTotalPlayTime] = useState(0);
+  const [discordMembers, setDiscordMembers] = useState(0);
 
   useEffect(() => {
     const fetchActiveUsers = async () => {
@@ -26,22 +27,25 @@ const StatsPage = () => {
       }
     };
 
+    const fetchDiscordMembers = async () => {
+      try {
+        const response = await fetch('https://discord.com/api/guilds/702877615136178326/widget.json');
+        const data = await response.json();
+        setDiscordMembers(data.presence_count || data.members.length);
+      } catch (error) {
+        console.error('Error fetching Discord members count:', error);
+      }
+    };
+
     fetchActiveUsers();
     fetchTotalPlayTime();
+    fetchDiscordMembers();
   }, []);
 
+  // Convert total playtime in seconds to days with decimal format
   const formatPlayTime = (seconds) => {
-    const minutes = Math.floor(seconds / 60);
-    const hours = Math.floor(minutes / 60);
-    const days = Math.floor(hours / 24);
-
-    if (days > 0) {
-      return `${days} days, ${hours % 24} hours`;
-    } else if (hours > 0) {
-      return `${hours} hours, ${minutes % 60} minutes`;
-    } else {
-      return `${minutes} minutes`;
-    }
+    const days = seconds / 86400; // 86400 seconds in a day
+    return `${days.toFixed(2)} days`; // Display days with two decimal places
   };
 
   const stats = [
@@ -65,9 +69,9 @@ const StatsPage = () => {
     },
     {
       id: 4,
-      icon: <FaDollarSign className="text-4xl text-green-500" />,
-      number: '$12,345',
-      description: 'Revenue',
+      icon: <FaDiscord className="text-4xl text-green-500" />,
+      number: discordMembers.toLocaleString(),
+      description: 'Discord Members Online',
     },
   ];
 
