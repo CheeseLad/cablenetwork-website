@@ -12,6 +12,7 @@ import SteamWorkshopGrid from "./components/SteamWorkshopGrid";
 import LeaderboardPage from "./components/LeaderboardPage";
 import ItemTable from "./components/ItemTable";
 import CommandsPage from "./components/CommandsPage";
+import PermissionGenerator from "./components/PermissionGenerator";
 
 function App() {
   return (
@@ -37,6 +38,16 @@ function App() {
             <div>
               <Navbar />
               <ItemTable />
+              <Footer />
+            </div>
+          }
+        />
+        <Route
+          path="/permission-generator"
+          element={
+            <div>
+              <Navbar />
+              <PermissionGenerator />
               <Footer />
             </div>
           }

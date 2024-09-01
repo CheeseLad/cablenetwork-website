@@ -55,6 +55,11 @@
     "dropdown": false
   },
   {
+    "name": "Permission Generator",
+    "href": "/permission-generator",
+    "dropdown": false
+  },
+  {
     "name": "Discord",
     "href": "https://discord.gg/cable-network-702877615136178326",
     "external": true
