@@ -50,6 +50,11 @@
     ]
   },
   {
+    "name": "Commands",
+    "href": "/commands",
+    "dropdown": false
+  },
+  {
     "name": "Discord",
     "href": "https://discord.gg/cable-network-702877615136178326",
     "external": true

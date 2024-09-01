@@ -11,6 +11,7 @@ import DiscordRulesPage from "./components/DiscordRulesPage";
 import SteamWorkshopGrid from "./components/SteamWorkshopGrid";
 import LeaderboardPage from "./components/LeaderboardPage";
 import ItemTable from "./components/ItemTable";
+import CommandsPage from "./components/CommandsPage";
 
 function App() {
   return (
@@ -36,6 +37,16 @@ function App() {
             <div>
               <Navbar />
               <ItemTable />
+              <Footer />
+            </div>
+          }
+        />
+        <Route 
+          path="/commands"
+          element={
+            <div>
+              <Navbar />
+              <CommandsPage />
               <Footer />
             </div>
           }
