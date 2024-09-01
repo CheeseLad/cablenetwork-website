@@ -22,7 +22,7 @@ const ItemTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/items?sortBy=${sortBy}&sortOrder=${sortOrder}&search=${globalFilter}`);
+        const response = await fetch(`https://cnapi.cheeselad.xyz/api/items?sortBy=${sortBy}&sortOrder=${sortOrder}&search=${globalFilter}`);
         const result = await response.json();
         setData(result);
         setLoading(false);

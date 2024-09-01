@@ -10,7 +10,7 @@ const ServerBanner = () => {
   useEffect(() => {
     const fetchServerData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/server');
+        const response = await axios.get('https://cnapi.cheeselad.xyz/api/server');
         const data = response.data;
 
         setServerData(data);

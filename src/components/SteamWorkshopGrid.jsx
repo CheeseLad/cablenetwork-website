@@ -9,7 +9,7 @@ const SteamWorkshopGrid = () => {
   useEffect(() => {
     const fetchMods = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/workshop-mods');
+        const response = await axios.get('https://cnapi.cheeselad.xyz/api/workshop-mods');
         setMods(response.data || []);
         setLoading(false);
       } catch (err) {

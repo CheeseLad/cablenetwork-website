@@ -8,7 +8,7 @@ const StatsPage = () => {
   useEffect(() => {
     const fetchActiveUsers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/active-users');
+        const response = await fetch('https://cnapi.cheeselad.xyz/api/active-users');
         const data = await response.json();
         setActiveUsers(data.activeUsersCount);
       } catch (error) {
@@ -18,7 +18,7 @@ const StatsPage = () => {
 
     const fetchTotalPlayTime = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/total-playtime');
+        const response = await fetch('https://cnapi.cheeselad.xyz/api/total-playtime');
         const data = await response.json();
         setTotalPlayTime(data.totalPlayTime);
       } catch (error) {
