@@ -21,6 +21,14 @@ const SteamWorkshopGrid = () => {
     fetchMods();
   }, []);
 
+  const stripTags = (text) => {
+    // Regular expression to match various tags and their attributes
+    const tagRegex = /\[\/?[a-zA-Z0-9]+\s*(?:=[^\]]*)?\]/g;
+    // Remove tags and return plain text
+    return text.replace(tagRegex, '');
+  };
+  
+
   if (loading) return <div className="text-center">Loading...</div>;
   if (error) return <div className="text-center text-red-500">{error}</div>;
 
@@ -39,7 +47,7 @@ const SteamWorkshopGrid = () => {
               <h2 className="font-bold text-xl mb-2">{mod.title || 'No Title'}</h2>
               <p className="text-gray-700 text-base mb-2">
                 {mod.file_description
-                  ? mod.file_description.split('\n').slice(0, 3).join('\n')
+                  ? stripTags(mod.file_description).split('\n').slice(0, 3).join('\n')
                   : 'No Description Available'}
               </p>
               <div className="text-gray-600 text-sm mb-2">
