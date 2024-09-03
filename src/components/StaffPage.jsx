@@ -17,8 +17,8 @@ import prosperity from '../assets/staff/prosperity.png';
 import ras from '../assets/staff/ras.png';
 import floop from '../assets/staff/floop.png';
 import carmanjackson from '../assets/staff/carmanjackson.png';
-import { FontAwesomeIcon } from '@fortawesomereact-fontawesome';
-import { faDiscord, faSteam } from '@fortawesomefree-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord, faSteam } from '@fortawesome/free-brands-svg-icons';
 
 const staffMembers = [
   {
