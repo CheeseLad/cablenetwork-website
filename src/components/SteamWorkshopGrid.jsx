@@ -33,6 +33,17 @@ const SteamWorkshopGrid = () => {
   return (
     <div className="container mx-auto px-4 py-6">
       <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">Server Workshop Mods</h1>
+      <div className="flex justify-center pb-4">
+  <a
+    href={`https://steamcommunity.com/sharedfiles/filedetails/?edit=true&id=2071736126`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+  >
+    View Steam Workshop Collection
+  </a>
+</div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {mods.map((mod) => (
           <div key={mod.publishedfileid} className="bg-white shadow-md rounded-lg overflow-hidden">
