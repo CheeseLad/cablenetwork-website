@@ -73,12 +73,12 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-lg">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-8xl mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex space-x-7">
             <a href="/" className="flex items-center py-4 px-2">
               <img src={logo} alt="Logo" className="h-10 w-10 mr-2"/>
-              <span className="font-semibold text-gray-500 text-lg">Cable Creative Roleplay</span>
+              <span className="font-semibold text-gray-500 text-lg whitespace-nowrap">Cable Creative Roleplay</span>
             </a>
           </div>
           <div className="hidden md:flex items-center space-x-1">

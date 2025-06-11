@@ -21,7 +21,7 @@ const HeroSection = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 5000,
   };
@@ -40,7 +40,7 @@ const HeroSection = () => {
             <h1 className="text-4xl font-bold mb-4">Cable Creative Roleplay</h1>
             <h2 className="text-2xl font-semibold mb-4">An Unturned Creative Roleplay Experience Like No Other!</h2>
             <p className="text-lg mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel dui in lorem convallis mattis vel ut diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce laoreet nisi eu maximus molestie. Praesent malesuada felis ac ante finibus, ac pretium nibh finibus. Donec viverra lorem sit amet pretium fringilla.
+            Founded in 2020, Cable Creative Roleplay has been the go-to place for fans of creative roleplay. We offer an experience like no other, with multiple different roleplay opportunities available to you. You can play around with plugins such as Crypto & Garages, and also get involved with the community by joining some of the many groups we have on offer. Come join us to find out more!
             </p>
           </div>
           

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import background1 from '../assets/background1.jpg';
 
 const SteamWorkshopGrid = () => {
   const [mods, setMods] = useState([]);
@@ -48,7 +49,7 @@ const SteamWorkshopGrid = () => {
         {mods.map((mod) => (
           <div key={mod.publishedfileid} className="bg-white shadow-md rounded-lg overflow-hidden">
             <img
-              src={mod.preview_url || 'https://images.steamusercontent.com/ugc/2387558161244802145/B1ADE9A9361035893872BF213055B1EB93FEF194'}
+              src={mod.preview_url || background1}
               alt={mod.title || 'No Title'}
               className="w-full h-48 object-cover"
             />
@@ -60,7 +61,7 @@ const SteamWorkshopGrid = () => {
                   : 'No Description Available'}
               </p>
               <div className="text-gray-600 text-sm mb-2">
-                <p><strong>Author:</strong> {mod.creator || 'Unknown Author'}</p>
+                <p><strong>Author:</strong> {mod.creator || 'No Author'}</p>
                 <p><strong>Rating:</strong> {mod.vote_data ? (mod.vote_data.score * 100).toFixed(2) + '%' : 'No ratings'}</p>
               </div>
               <a

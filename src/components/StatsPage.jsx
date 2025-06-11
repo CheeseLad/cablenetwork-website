@@ -77,7 +77,7 @@ const StatsPage = () => {
   return (
     <div className="bg-white py-10">
       <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Statistics</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Stats</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat) => (
             <div key={stat.id} className="bg-green-100 rounded-lg shadow-lg p-6 flex flex-col items-center">

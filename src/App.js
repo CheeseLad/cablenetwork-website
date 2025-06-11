@@ -24,7 +24,7 @@ function App() {
             <div>
               <Navbar />
               <HeroSection />
-              <ServerBanner />
+              {/*<ServerBanner />*/}
               <StatsPage />
               <LeaderboardPage />
               
