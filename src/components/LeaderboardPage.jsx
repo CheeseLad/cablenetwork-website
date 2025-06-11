@@ -9,7 +9,7 @@ const LeaderboardPage = () => {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const response = await fetch('https://cnapi.cheeselad.xyz/api/leaderboard');
+        const response = await fetch('https://api.cablenetwork.xyz/api/leaderboard');
         const data = await response.json();
         setLeaderboard(data);
         setLoading(false);
