@@ -48,7 +48,7 @@ const SteamWorkshopGrid = () => {
         {mods.map((mod) => (
           <div key={mod.publishedfileid} className="bg-white shadow-md rounded-lg overflow-hidden">
             <img
-              src={mod.preview_url || 'https://via.placeholder.com/300x150'}
+              src={mod.preview_url || 'https://images.steamusercontent.com/ugc/2387558161244802145/B1ADE9A9361035893872BF213055B1EB93FEF194'}
               alt={mod.title || 'No Title'}
               className="w-full h-48 object-cover"
             />
