@@ -13,7 +13,7 @@
 - Discord Server Widget API
 - Steam Web API
 - Unturned-Servers.net API
-- [Cable Network API](https://github.com/CheeseLad/cablenetwork-website-backend/tree/main/backend)
+- [Cable Network API](https://github.com/CheeseLad/cablenetwork-website/tree/master/backend)
 
 ## Website Content & Features:
 - Server gallery slideshow and description
