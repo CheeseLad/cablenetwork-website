@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const app = express();
 
-const port = process.env.API_PORT || 5000;
+const port = 5000;
 const apiKey = process.env.STEAM_API_KEY;
 const collectionId = process.env.STEAM_WORKSHOP_COLLECTION_ID;
 const UapiKey = process.env.UNTURNED_API_KEY;
