@@ -1,6 +1,6 @@
 services:
   cablenetwork-website-backend:
-    image: ghcr.io/cheeselad/cablenetwork-website-backend:latest
+    image: ghcr.io/cheeselad/cablenetwork-website-backend-api:latest
     container_name: cablenetwork-website-backend
     hostname: cablenetwork-website-backend
     restart: unless-stopped
@@ -14,7 +14,7 @@ services:
       - UNTURNED_API_KEY=${UNTURNED_API_KEY}
       - SERVER_ID=${SERVER_ID}
     ports:
-      - "5000:5000"
+      - "5000:6023"
 
   cablenetwork-website-frontend:
     image: ghcr.io/cheeselad/cablenetwork-website-frontend:latest
@@ -24,4 +24,4 @@ services:
     depends_on:
       - cablenetwork-website-backend
     ports:
-      - "80:80"
+      - "80:6024"

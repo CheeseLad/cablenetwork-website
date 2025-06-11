@@ -42,7 +42,7 @@ jobs:
         id: meta-backend
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-backend
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-backend-api
           tags: |
             type=sha,format=long
             type=match,pattern=main
