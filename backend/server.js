@@ -17,23 +17,31 @@ const serverID = process.env.SERVER_ID;
 app.use(cors());
 app.use(express.json());
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
   host: process.env.UNTURNED_SERVER_DATABASE_HOST,
   user: process.env.UNTURNED_SERVER_DATABASE_USER,
   password: process.env.UNTURNED_SERVER_DATABASE_PASSWORD,
-  database: process.env.UNTURNED_SERVER_DATABASE_NAME
+  database: process.env.UNTURNED_SERVER_DATABASE_NAME,
+  waitForConnections: true,
+  connectionLimit: 100,
+  queueLimit: 0,
+  connectTimeout: 10000
 });
 
-db.connect((err) => {
+db.query('SELECT 1', (err) => {
   if (err) {
-    console.error('Error connecting to MySQL:', err);
-    return;
+    console.error('MySQL connection test failed:', err.message || err);
+  } else {
+    console.log('Connected to MySQL database via connection pool.');
   }
-  console.log('Connected to MySQL database.');
+});
+
+db.on('error', (err) => {
+  console.error('MySQL pool error:', err);
 });
 
 app.get('/', (req, res) => {
-  res.send('Cable Creative Roleplay Website API');
+  res.send('Cable Network Website API');
 });
 
 app.get('/api/leaderboard', (req, res) => {
