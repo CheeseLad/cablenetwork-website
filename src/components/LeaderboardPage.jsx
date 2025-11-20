@@ -10,7 +10,7 @@ const LeaderboardPage = () => {
     const fetchLeaderboard = async () => {
       try {
         const response = await fetch(
-          "https://api.cablenetwork.xyz/api/leaderboard"
+          "https://cablenetwork-api.jakefarrell.ie/api/leaderboard"
         );
         const data = await response.json();
         setLeaderboard(data);

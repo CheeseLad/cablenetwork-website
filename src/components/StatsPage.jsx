@@ -9,7 +9,7 @@ const StatsPage = () => {
   useEffect(() => {
     const fetchActiveUsers = async () => {
       try {
-        const response = await fetch('https://api.cablenetwork.xyz/api/active-users');
+        const response = await fetch('https://cablenetwork-api.jakefarrell.ie/api/active-users');
         const data = await response.json();
         setActiveUsers(data.activeUsersCount);
       } catch (error) {
@@ -19,7 +19,7 @@ const StatsPage = () => {
 
     const fetchTotalPlayTime = async () => {
       try {
-        const response = await fetch('https://api.cablenetwork.xyz/api/total-playtime');
+        const response = await fetch('https://cablenetwork-api.jakefarrell.ie/api/total-playtime');
         const data = await response.json();
         setTotalPlayTime(data.totalPlayTime);
       } catch (error) {

@@ -10,7 +10,7 @@ const SteamWorkshopGrid = () => {
   useEffect(() => {
     const fetchMods = async () => {
       try {
-        const response = await axios.get('https://api.cablenetwork.xyz/api/workshop-mods');
+        const response = await axios.get('https://cablenetwork-api.jakefarrell.ie/api/workshop-mods');
         setMods(response.data || []);
         setLoading(false);
       } catch (err) {

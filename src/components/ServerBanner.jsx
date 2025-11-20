@@ -10,7 +10,7 @@ const ServerBanner = () => {
   useEffect(() => {
     const fetchServerData = async () => {
       try {
-        const response = await axios.get('https://api.cablenetwork.xyz/api/server');
+        const response = await axios.get('https://cablenetwork-api.jakefarrell.ie/api/server');
         const data = response.data;
 
         setServerData(data);
