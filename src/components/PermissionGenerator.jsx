@@ -46,22 +46,18 @@ const PermissionGenerator = () => {
     xmlContent += '  <Permissions>\n';
 
     if (itemsArray.length > 0) {
-      
       itemsArray.forEach(variable => {
         xmlContent += `    <Permission Cooldown="0">bypass.${variable}</Permission>\n`;
       });
-      
     }
 
     if (vehiclesArray.length > 0) {
-
       vehiclesArray.forEach(variable => {
         xmlContent += `    <Permission Cooldown="0">vehiclebypass.${variable}</Permission>\n`;
       });
     }
 
     xmlContent += '  </Permissions>\n';
-
     xmlContent += '</Group>';
     setXml(xmlContent);
   };
@@ -76,15 +72,15 @@ const PermissionGenerator = () => {
   return (
     <div className="relative pb-10 pt-20 overflow-hidden bg-gradient-to-r from-green-400 to-green-500">
       <div className="flex justify-center items-center h-full relative z-10">
-        <div className="flex flex-col w-full max-w-6xl px-4 py-8 bg-white rounded-lg shadow-lg">
-          <h1 className="text-4xl font-bold mb-4">Permission Generator</h1>
+        <div className="flex flex-col w-full max-w-6xl px-4 py-8 bg-white dark:bg-[#131316] rounded-lg shadow-lg dark:border dark:border-[#27272a] transition-colors duration-200">
+          <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-[#fafafa]">Permission Generator</h1>
           <div className="flex flex-wrap -mx-2">
             <div className="w-full md:w-1/2 px-2 mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+              <label className="block text-gray-700 dark:text-[#fafafa] text-sm font-bold mb-2" htmlFor="name">
                 Name
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border border-gray-300 dark:border-[#27272a] rounded w-full py-2 px-3 text-gray-700 dark:text-[#fafafa] bg-white dark:bg-[#1a1a20] leading-tight focus:outline-none focus:shadow-outline"
                 id="name"
                 type="text"
                 value={name}
@@ -93,11 +89,11 @@ const PermissionGenerator = () => {
               />
             </div>
             <div className="w-full md:w-1/2 px-2 mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="prefix">
+              <label className="block text-gray-700 dark:text-[#fafafa] text-sm font-bold mb-2" htmlFor="prefix">
                 Prefix
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border border-gray-300 dark:border-[#27272a] rounded w-full py-2 px-3 text-gray-700 dark:text-[#fafafa] bg-white dark:bg-[#1a1a20] leading-tight focus:outline-none focus:shadow-outline"
                 id="prefix"
                 type="text"
                 value={prefix}
@@ -108,11 +104,11 @@ const PermissionGenerator = () => {
           </div>
           <div className="flex flex-wrap -mx-2">
             <div className="w-full md:w-1/2 px-2 mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="color">
+              <label className="block text-gray-700 dark:text-[#fafafa] text-sm font-bold mb-2" htmlFor="color">
                 Color
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border border-gray-300 dark:border-[#27272a] rounded w-full py-2 px-3 text-gray-700 dark:text-[#fafafa] bg-white dark:bg-[#1a1a20] leading-tight focus:outline-none focus:shadow-outline"
                 id="color"
                 type="text"
                 value={color}
@@ -121,11 +117,11 @@ const PermissionGenerator = () => {
               />
             </div>
             <div className="w-full md:w-1/2 px-2 mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="groups">
+              <label className="block text-gray-700 dark:text-[#fafafa] text-sm font-bold mb-2" htmlFor="groups">
                 Steam64IDs (comma-separated)
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border border-gray-300 dark:border-[#27272a] rounded w-full py-2 px-3 text-gray-700 dark:text-[#fafafa] bg-white dark:bg-[#1a1a20] leading-tight focus:outline-none focus:shadow-outline"
                 id="groups"
                 type="text"
                 value={groups}
@@ -135,11 +131,11 @@ const PermissionGenerator = () => {
             </div>
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="items">
+            <label className="block text-gray-700 dark:text-[#fafafa] text-sm font-bold mb-2" htmlFor="items">
               Items IDs (comma-separated)
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border border-gray-300 dark:border-[#27272a] rounded w-full py-2 px-3 text-gray-700 dark:text-[#fafafa] bg-white dark:bg-[#1a1a20] leading-tight focus:outline-none focus:shadow-outline"
               id="items"
               type="text"
               value={items}
@@ -148,11 +144,11 @@ const PermissionGenerator = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="vehicles">
+            <label className="block text-gray-700 dark:text-[#fafafa] text-sm font-bold mb-2" htmlFor="vehicles">
               Vehicles IDs (comma-separated)
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border border-gray-300 dark:border-[#27272a] rounded w-full py-2 px-3 text-gray-700 dark:text-[#fafafa] bg-white dark:bg-[#1a1a20] leading-tight focus:outline-none focus:shadow-outline"
               id="vehicles"
               type="text"
               value={vehicles}
@@ -161,9 +157,9 @@ const PermissionGenerator = () => {
             />
           </div>
           <div className="mt-4">
-            <h2 className="text-2xl font-semibold mb-2">Generated XML:</h2>
+            <h2 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-[#fafafa]">Generated XML:</h2>
             <div className="relative">
-              <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto">
+              <pre className="bg-gray-100 dark:bg-[#1a1a20] dark:border dark:border-[#27272a] text-gray-800 dark:text-[#fafafa] p-4 rounded-lg overflow-x-auto">
                 {xml}
               </pre>
               <button

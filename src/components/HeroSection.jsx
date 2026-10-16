@@ -34,17 +34,17 @@ const HeroSection = () => {
         <div className="bg-cover bg-center h-full" style={{ backgroundImage: `url(${background3})` }}></div>
       </Slider>
 
-      <div className="flex justify-center items-center h-full relative z-10 ">
-        <div className="flex w-full max-w-6xl px-4 py-8 bg-white rounded-lg shadow-lg">
-          <div className="w-1/2 pr-8">
+      <div className="flex justify-center items-center h-full relative z-10 px-4">
+        <div className="flex flex-col md:flex-row w-full max-w-6xl px-4 py-8 bg-white dark:bg-[#131316] text-gray-900 dark:text-[#fafafa] rounded-lg shadow-lg dark:border dark:border-[#27272a] transition-colors duration-200">
+          <div className="w-full md:w-1/2 md:pr-8 mb-6 md:mb-0">
             <h1 className="text-4xl font-bold mb-4">Cable Creative Roleplay</h1>
-            <h2 className="text-2xl font-semibold mb-4">An Unturned Creative Roleplay Experience Like No Other!</h2>
-            <p className="text-lg mb-6">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-green-400">An Unturned Creative Roleplay Experience Like No Other!</h2>
+            <p className="text-lg mb-6 text-gray-700 dark:text-[#a1a1aa]">
             Founded in 2020, Cable Creative Roleplay has been the go-to place for fans of creative roleplay. We offer an experience like no other, with multiple different roleplay opportunities available to you. You can play around with plugins such as Crypto & Garages, and also get involved with the community by joining some of the many groups we have on offer. Come join us to find out more!
             </p>
           </div>
           
-          <div className="w-1/2">
+          <div className="w-full md:w-1/2">
             <Slider {...screenshotSliderSettings}>
               <div className="p-2">
                 <img src={background1} alt="Screenshot 1" className="w-full rounded-lg shadow-md"/>

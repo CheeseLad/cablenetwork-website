@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* CSS Design Tokens - Dark by default */
+:root {
+  --color-page: #09090b;
+  --color-card: #131316;
+  --color-surface-raised: #1a1a20;
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-border: #27272a;
+  --color-focus: #22c55e;
+  --color-error: #f87171;
+  --color-error-surface: #450a0a;
+}
+
+[data-theme="light"] {
+  --color-page: #ffffff;
+  --color-card: #ffffff;
+  --color-surface-raised: #f4f4f5;
+  --color-text-primary: #09090b;
+  --color-text-secondary: #52525b;
+  --color-border: #e4e4e7;
+  --color-focus: #16a34a;
+  --color-error: #dc2626;
+  --color-error-surface: #fee2e2;
+}
+
+[data-theme="dark"] {
+  --color-page: #09090b;
+  --color-card: #131316;
+  --color-surface-raised: #1a1a20;
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-border: #27272a;
+  --color-focus: #22c55e;
+  --color-error: #f87171;
+  --color-error-surface: #450a0a;
+}
+
+body {
+  background-color: var(--color-page);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

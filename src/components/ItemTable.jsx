@@ -7,7 +7,7 @@ const GlobalFilter = ({ globalFilter, setGlobalFilter }) => {
       value={globalFilter || ''}
       onChange={(e) => setGlobalFilter(e.target.value || undefined)}
       placeholder="Search items..."
-      className="mb-4 p-2 border border-gray-300 rounded"
+      className="mb-4 p-2 border border-gray-300 dark:border-[#27272a] rounded bg-white dark:bg-[#1a1a20] text-gray-900 dark:text-[#fafafa] focus:outline-none"
     />
   );
 };
@@ -24,10 +24,11 @@ const ItemTable = () => {
       try {
         const response = await fetch(`https://cablenetwork-api.jakefarrell.ie/api/items?sortBy=${sortBy}&sortOrder=${sortOrder}&search=${globalFilter}`);
         const result = await response.json();
-        setData(result);
+        setData(Array.isArray(result) ? result : []);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching item data:', error);
+        setLoading(false);
       }
     };
 
@@ -63,24 +64,24 @@ const ItemTable = () => {
   );
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="text-center py-10 text-gray-800 dark:text-[#fafafa]">Loading...</div>;
   }
 
   return (
-    <div className="bg-white py-10">
+    <div className="bg-white dark:bg-[#09090b] py-10 transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">Item Shop</h1>
+        <h1 className="text-3xl font-bold text-gray-800 dark:text-[#fafafa] mb-8 text-center">Item Shop Prices</h1>
         <div className="overflow-x-auto">
           <GlobalFilter globalFilter={globalFilter} setGlobalFilter={setGlobalFilter} />
-          <div className="border border-gray-300 rounded-lg shadow-lg">
-            <table {...getTableProps()} className="min-w-full bg-white border border-gray-200">
+          <div className="border border-gray-300 dark:border-[#27272a] rounded-lg shadow-lg">
+            <table {...getTableProps()} className="min-w-full bg-white dark:bg-[#131316] border border-gray-200 dark:border-[#27272a]">
               <thead>
                 {headerGroups.map(headerGroup => (
-                  <tr {...headerGroup.getHeaderGroupProps()} className="border-b">
+                  <tr {...headerGroup.getHeaderGroupProps()} className="border-b border-gray-200 dark:border-[#27272a] dark:bg-[#1a1a20]">
                     {headerGroup.headers.map(column => (
                       <th
                         {...column.getHeaderProps(column.getSortByToggleProps())}
-                        className="p-2 text-left cursor-pointer"
+                        className="p-2 text-left cursor-pointer text-gray-800 dark:text-[#fafafa]"
                       >
                         {column.render('Header')}
                         <span>
@@ -95,9 +96,9 @@ const ItemTable = () => {
                 {rows.map(row => {
                   prepareRow(row);
                   return (
-                    <tr {...row.getRowProps()} className="border-b">
+                    <tr {...row.getRowProps()} className="border-b border-gray-200 dark:border-[#27272a] dark:hover:bg-[#1a1a20]/60">
                       {row.cells.map(cell => (
-                        <td {...cell.getCellProps()} className="p-2">
+                        <td {...cell.getCellProps()} className="p-2 text-gray-800 dark:text-[#fafafa]">
                           {cell.render('Cell')}
                         </td>
                       ))}

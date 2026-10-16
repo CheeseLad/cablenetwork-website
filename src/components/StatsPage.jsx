@@ -75,15 +75,18 @@ const StatsPage = () => {
   ];
 
   return (
-    <div className="bg-white py-10">
+    <div className="bg-white dark:bg-[#09090b] pt-10 transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Stats</h1>
+        <h1 className="text-3xl font-bold text-gray-800 dark:text-[#fafafa] mb-8 text-center">Our Stats</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat) => (
-            <div key={stat.id} className="bg-green-100 rounded-lg shadow-lg p-6 flex flex-col items-center">
+            <div
+              key={stat.id}
+              className="bg-green-100 dark:bg-[#131316] dark:border dark:border-[#27272a] rounded-lg shadow-lg p-6 flex flex-col items-center hover:shadow-xl transition-shadow"
+            >
               <div className="mb-4">{stat.icon}</div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-2">{stat.number}</h2>
-              <p className="text-gray-600 text-center">{stat.description}</p>
+              <h2 className="text-4xl font-bold text-gray-800 dark:text-[#fafafa] mb-2">{stat.number}</h2>
+              <p className="text-gray-600 dark:text-[#a1a1aa] text-center">{stat.description}</p>
             </div>
           ))}
         </div>
