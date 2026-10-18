@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Loader2, RefreshCw, ExternalLink, AlertCircle, Search, FileText } from 'lucide-react';
 import { loadGoogleDocAsMarkdown } from '../utils/googleDocs';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const GoogleDocViewer = ({
   docUrl,
@@ -11,6 +12,7 @@ const GoogleDocViewer = ({
   externalUrl,
   className = ''
 }) => {
+  useDocumentTitle(title);
   const [markdown, setMarkdown] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

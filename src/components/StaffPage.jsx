@@ -19,6 +19,7 @@ import floop from '../assets/staff/floop.png';
 import carmanjackson from '../assets/staff/carmanjackson.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faSteam } from '@fortawesome/free-brands-svg-icons';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const staffMembers = [
   {
@@ -150,6 +151,7 @@ const staffMembers = [
 ];
 
 const StaffPage = () => {
+  useDocumentTitle('Staff');
   return (
     <div className="bg-gray-100 dark:bg-[#09090b] p-8 transition-colors duration-200">
       <div className="text-center mb-12">

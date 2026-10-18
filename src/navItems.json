@@ -25,9 +25,8 @@
         "href": "/bypasses"
       },
       {
-        "name": "Staff Applications",
-        "href": "https://forms.gle/RRRr2fhtbHXucgvu7",
-        "external": true
+        "name": "Donation Information",
+        "href": "/donation-info"
       }
     ]
   },

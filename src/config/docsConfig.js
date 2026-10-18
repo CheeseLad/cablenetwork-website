@@ -19,9 +19,15 @@ export const GOOGLE_DOCS = {
   },
   bypasses: {
     id: 'bypasses',
-    title: 'Bypasses',
+    title: 'Bypasses Guide',
     description: 'List of bypasses for Cable Network servers',
     docUrl: 'https://docs.google.com/document/d/e/2PACX-1vQ_narS_2vhk4nh2BSxkmswe8OAZiI7_XGnuMpvfWVEajth3HJleW7CtrttzZyVUBImCAHCuMm7c3-m/pub?embedded=true'
-  }
+  },
+  donationInfo: {
+    id: 'donation-info',
+    title: 'Donation Information',
+    description: 'Details about donating to Cable Network',
+    docUrl: 'https://docs.google.com/document/d/e/2PACX-1vR0YkJxtDZY-xipXt1x1GcCoB1cPzC4Vt4q3GeNDAbNvnI07rk93tRK6GCCvUmHftub-hRXS9ClymuF/pub?embedded=true'
+  },
 };
 

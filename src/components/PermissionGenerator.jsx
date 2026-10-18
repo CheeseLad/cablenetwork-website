@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Copy, Check } from 'lucide-react';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const PermissionGenerator = () => {
+  useDocumentTitle('Permission Generator');
   const [name, setName] = useState('');
   const [prefix, setPrefix] = useState('');
   const [color, setColor] = useState('');

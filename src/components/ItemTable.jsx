@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTable, useSortBy, useGlobalFilter } from 'react-table';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const GlobalFilter = ({ globalFilter, setGlobalFilter }) => {
   return (
@@ -13,6 +14,7 @@ const GlobalFilter = ({ globalFilter, setGlobalFilter }) => {
 };
 
 const ItemTable = () => {
+  useDocumentTitle('Item Shop Prices');
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [globalFilter, setGlobalFilter] = useState('');

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import background1 from '../assets/background1.jpg';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 const SteamWorkshopGrid = () => {
+  useDocumentTitle('Workshop Mods');
   const [mods, setMods] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
