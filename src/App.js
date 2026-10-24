@@ -10,9 +10,9 @@ import SteamWorkshopGrid from "./components/SteamWorkshopGrid";
 import LeaderboardPage from "./components/LeaderboardPage";
 import ItemTable from "./components/ItemTable";
 import PermissionGenerator from "./components/PermissionGenerator";
-import GoogleDocViewer from './components/GoogleDocViewer';
+import DocViewer from './components/DocViewer';
 import PageTitleUpdater from './components/PageTitleUpdater';
-import { GOOGLE_DOCS } from './config/docsConfig';
+import { DOCS } from './config/docsConfig';
 
 function App() {
   return (
@@ -59,10 +59,11 @@ function App() {
               element={
                 <div>
                   <Navbar />
-                  <GoogleDocViewer
-                    title={GOOGLE_DOCS.commands.title}
-                    description={GOOGLE_DOCS.commands.description}
-                    docUrl={GOOGLE_DOCS.commands.docUrl}
+                  <DocViewer
+                    title={DOCS.commands.title}
+                    description={DOCS.commands.description}
+                    docUrl={DOCS.commands.docUrl}
+                    githubUrl={DOCS.commands.githubUrl}
                   />
                   <Footer />
                 </div>
@@ -73,10 +74,11 @@ function App() {
               element={
                 <div>
                   <Navbar />
-                  <GoogleDocViewer
-                    title={GOOGLE_DOCS.donationInfo.title}
-                    description={GOOGLE_DOCS.donationInfo.description}
-                    docUrl={GOOGLE_DOCS.donationInfo.docUrl}
+                  <DocViewer
+                    title={DOCS.donationInfo.title}
+                    description={DOCS.donationInfo.description}
+                    docUrl={DOCS.donationInfo.docUrl}
+                    githubUrl={DOCS.donationInfo.githubUrl}
                   />
                   <Footer />
                 </div>
@@ -107,10 +109,11 @@ function App() {
               element={
                 <div>
                   <Navbar />
-                  <GoogleDocViewer
-                    title={GOOGLE_DOCS.serverRules.title}
-                    description={GOOGLE_DOCS.serverRules.description}
-                    docUrl={GOOGLE_DOCS.serverRules.docUrl}
+                  <DocViewer
+                    title={DOCS.serverRules.title}
+                    description={DOCS.serverRules.description}
+                    docUrl={DOCS.serverRules.docUrl}
+                    githubUrl={DOCS.serverRules.githubUrl}
                   />
                   <Footer />
                 </div>
@@ -121,10 +124,11 @@ function App() {
               element={
                 <div>
                   <Navbar />
-                  <GoogleDocViewer
-                    title={GOOGLE_DOCS.discordRules.title}
-                    description={GOOGLE_DOCS.discordRules.description}
-                    docUrl={GOOGLE_DOCS.discordRules.docUrl}
+                  <DocViewer
+                    title={DOCS.discordRules.title}
+                    description={DOCS.discordRules.description}
+                    docUrl={DOCS.discordRules.docUrl}
+                    githubUrl={DOCS.discordRules.githubUrl}
                   />
                   <Footer />
                 </div>
@@ -135,10 +139,11 @@ function App() {
               element={
                 <div>
                   <Navbar />
-                  <GoogleDocViewer
-                    title={GOOGLE_DOCS.bypasses.title}
-                    description={GOOGLE_DOCS.bypasses.description}
-                    docUrl={GOOGLE_DOCS.bypasses.docUrl}
+                  <DocViewer
+                    title={DOCS.bypasses.title}
+                    description={DOCS.bypasses.description}
+                    docUrl={DOCS.bypasses.docUrl}
+                    githubUrl={DOCS.bypasses.githubUrl}
                   />
                   <Footer />
                 </div>

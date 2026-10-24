@@ -22,7 +22,7 @@
 - Economy leaderboard listing the richest players
 - Server workshop mod page with all details
 - Item shop page with search and sort
-- Embedded Google Docs for server rules, discord rules and command list
+- Embedded Markdown documentation from GitHub for server rules, discord rules, bypasses, donation info and commands list
 - Unturned permission generator to allow members to create their custom groups easily
 - Staff page that contains a list of staff, along with positions and contact information
 
