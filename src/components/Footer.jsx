@@ -14,6 +14,15 @@ const Footer = () => {
           <p className="text-gray-500 dark:text-[#a1a1aa]">
             © 2020 - {currentYear} Cable Creative Roleplay. All rights reserved.
           </p>
+                    <p className="text-gray-500 dark:text-[#a1a1aa]">
+            Made with ❤️ by <a 
+              href="https://jakefarrell.ie" 
+              aria-label="Jake Farrell's Personal Website" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-green-500 hover:shadow-green-500 text-gray-800 dark:text-white"
+            >Jake Farrell</a>
+          </p>
         </div>
         <div className="flex justify-center space-x-6">
           <a
