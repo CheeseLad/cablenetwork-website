@@ -147,7 +147,7 @@ const DocViewer = ({
               </div>
             </div>
           ) : (
-            <div className="prose dark:prose-invert lg:prose-lg max-w-none">
+            <div className="prose dark:prose-invert lg:prose-lg max-w-none prose-code:before:content-none prose-code:after:content-none">
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
@@ -221,9 +221,9 @@ const DocViewer = ({
                       {children}
                     </a>
                   ),
-                  // Responsive styled tables
+                  // Responsive styled tables with generous header padding
                   table: ({ node, ...props }) => (
-                    <div className="overflow-x-auto my-6 border border-gray-200 dark:border-[#27272a] rounded-lg shadow-sm">
+                    <div className="not-prose overflow-x-auto my-6 border border-gray-200 dark:border-[#27272a] rounded-xl shadow-sm">
                       <table
                         className="min-w-full divide-y divide-gray-200 dark:divide-[#27272a] text-left text-sm"
                         {...props}
@@ -232,12 +232,15 @@ const DocViewer = ({
                   ),
                   thead: ({ node, ...props }) => (
                     <thead
-                      className="bg-gray-100 dark:bg-[#1a1a20] text-gray-900 dark:text-gray-100 font-semibold"
+                      className="bg-gray-100/90 dark:bg-[#1a1a20] text-gray-900 dark:text-gray-100 font-semibold border-b border-gray-200 dark:border-[#27272a]"
                       {...props}
                     />
                   ),
                   th: ({ node, ...props }) => (
-                    <th className="px-4 py-3 text-xs uppercase tracking-wider font-bold" {...props} />
+                    <th
+                      className="px-6 py-4 text-left text-xs sm:text-sm font-bold uppercase tracking-wider text-gray-800 dark:text-gray-200"
+                      {...props}
+                    />
                   ),
                   tbody: ({ node, ...props }) => (
                     <tbody
@@ -252,7 +255,10 @@ const DocViewer = ({
                     />
                   ),
                   td: ({ node, ...props }) => (
-                    <td className="px-4 py-3 text-gray-700 dark:text-gray-300 align-top" {...props} />
+                    <td
+                      className="px-6 py-4 text-gray-700 dark:text-gray-300 align-top leading-relaxed text-sm"
+                      {...props}
+                    />
                   ),
                   ul: ({ node, ...props }) => (
                     <ul className="list-disc pl-5 my-3 space-y-1.5 text-gray-700 dark:text-gray-300" {...props} />
@@ -269,20 +275,33 @@ const DocViewer = ({
                   ),
                   pre: ({ node, ...props }) => (
                     <pre
-                      className="bg-gray-100 dark:bg-[#1a1a20] p-4 rounded-lg overflow-x-auto my-4 text-sm font-mono border border-gray-200 dark:border-[#27272a] text-gray-800 dark:text-gray-200 [&>code]:bg-transparent [&>code]:p-0 [&>code]:text-inherit"
+                      className="bg-gray-100 dark:bg-[#1a1a20] p-4 rounded-lg overflow-x-auto my-4 text-sm font-mono border border-gray-200 dark:border-[#27272a] text-gray-800 dark:text-gray-200 [&>code]:bg-transparent [&>code]:p-0 [&>code]:text-inherit [&>code]:before:content-none [&>code]:after:content-none [&>code]:before:hidden [&>code]:after:hidden"
                       {...props}
                     />
                   ),
-                  code: ({ node, className, ...props }) => (
-                    <code
-                      className={
-                        className
-                          ? className
-                          : "bg-gray-100 dark:bg-[#1a1a20] text-green-600 dark:text-green-400 px-1.5 py-0.5 rounded text-sm font-mono"
-                      }
-                      {...props}
-                    />
-                  ),
+                  code: ({ node, className, children, ...props }) => {
+                    const stripBackticks = text => {
+                      if (typeof text !== 'string') return text;
+                      return text.replace(/^`+|`+$/g, '');
+                    };
+
+                    const processedChildren = React.Children.map(children, child =>
+                      typeof child === 'string' ? stripBackticks(child) : child
+                    );
+
+                    return (
+                      <code
+                        className={
+                          className
+                            ? `${className} before:content-none after:content-none before:hidden after:hidden`
+                            : "bg-gray-100 dark:bg-[#1a1a20] text-green-600 dark:text-green-400 px-1.5 py-0.5 rounded text-sm font-mono before:content-none after:content-none before:hidden after:hidden"
+                        }
+                        {...props}
+                      >
+                        {processedChildren}
+                      </code>
+                    );
+                  },
                   img: ({ node, alt, src, ...props }) => (
                     <img
                       src={src}

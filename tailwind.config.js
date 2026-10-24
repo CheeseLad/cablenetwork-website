@@ -15,9 +15,21 @@ module.exports = {
         border: 'var(--color-border)',
         'app-error': 'var(--color-error)',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            'code::before': {
+              content: '"" !important',
+            },
+            'code::after': {
+              content: '"" !important',
+            },
+          },
+        },
+      },
     },
   },
   plugins: [
     require('@tailwindcss/typography'),
   ],
-}
+}

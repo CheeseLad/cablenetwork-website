@@ -57,3 +57,10 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Remove backticks added by @tailwindcss/typography around code elements */
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::before,
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::after {
+  content: "" !important;
+  display: none !important;
+}
