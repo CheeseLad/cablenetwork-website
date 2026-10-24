@@ -11,7 +11,7 @@ const StatsPage = () => {
       try {
         const response = await fetch('https://cablenetwork-api.jakefarrell.ie/api/active-users');
         const data = await response.json();
-        setActiveUsers(data.activeUsersCount);
+        setActiveUsers(data?.activeUsersCount ?? 0);
       } catch (error) {
         console.error('Error fetching active users count:', error);
       }
@@ -21,7 +21,7 @@ const StatsPage = () => {
       try {
         const response = await fetch('https://cablenetwork-api.jakefarrell.ie/api/total-playtime');
         const data = await response.json();
-        setTotalPlayTime(data.totalPlayTime);
+        setTotalPlayTime(data?.totalPlayTime ?? 0);
       } catch (error) {
         console.error('Error fetching total playtime:', error);
       }
@@ -31,7 +31,7 @@ const StatsPage = () => {
       try {
         const response = await fetch('https://discord.com/api/guilds/702877615136178326/widget.json');
         const data = await response.json();
-        setDiscordMembers(data.presence_count || data.members.length);
+        setDiscordMembers(data?.presence_count || data?.members?.length || 0);
       } catch (error) {
         console.error('Error fetching Discord members count:', error);
       }
@@ -42,8 +42,8 @@ const StatsPage = () => {
     fetchDiscordMembers();
   }, []);
 
-  const formatPlayTime = (seconds) => {
-    const days = seconds / 86400;
+  const formatPlayTime = (seconds = 0) => {
+    const days = (seconds || 0) / 86400;
     return `${days.toFixed(2)} days`;
   };
 
@@ -51,13 +51,13 @@ const StatsPage = () => {
     {
       id: 1,
       icon: <FaUser className="text-4xl text-green-500" />,
-      number: activeUsers.toLocaleString(),
+      number: (activeUsers ?? 0).toLocaleString(),
       description: 'Unique Players',
     },
     {
       id: 2,
       icon: <FaServer className="text-4xl text-green-500" />,
-      number: '4',
+      number: '6',
       description: 'Years Online',
     },
     {
@@ -69,7 +69,7 @@ const StatsPage = () => {
     {
       id: 4,
       icon: <FaDiscord className="text-4xl text-green-500" />,
-      number: discordMembers.toLocaleString(),
+      number: (discordMembers ?? 0).toLocaleString(),
       description: 'Discord Members Online',
     },
   ];

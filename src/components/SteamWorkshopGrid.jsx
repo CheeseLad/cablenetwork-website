@@ -38,7 +38,7 @@ const SteamWorkshopGrid = () => {
       <h1 className="text-3xl font-bold text-gray-800 dark:text-[#fafafa] mb-8 text-center">Server Workshop Mods</h1>
       <div className="flex justify-center pb-4">
         <a
-          href={`https://steamcommunity.com/sharedfiles/filedetails/?edit=true&id=2071736126`}
+          href={`https://steamcommunity.com/sharedfiles/filedetails/?edit=true&id=3815472176`}
           target="_blank"
           rel="noopener noreferrer"
           className="mb-4 inline-block bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700"
